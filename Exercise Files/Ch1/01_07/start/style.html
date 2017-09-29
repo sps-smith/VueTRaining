@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+<div id="app">
+    <div :style="{border: '2px solid black', 'margin-botton': '30px', fontSize: myFontSize + 'px'}">
+        Some content
+    </div>
+
+    <div :style="fancyDiv">Fancy Content</div>
+
+    <div :style="[fancyDiv, fancierDiv]" @mouseover="fancierDiv.backgroundColor = 'red'" @mouseout="fancierDiv.backgroundColor= 'blue'">Fancier Div</div>
+</div>
+
+<script>
+    new Vue({
+       el: '#app',
+       data: {
+           myFontSize: 24,
+           fancyDiv:{
+               backgroundColor: '#E3E3E3',
+               marginTop: '10px',
+               borderRadius: '10px',
+               padding: '20px',
+               height: '40px'
+           },
+           fancierDiv:{
+               backgroundColor: 'blue',
+               border: '5px solid'
+           }
+       }
+    });
+</script>

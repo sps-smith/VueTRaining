@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{msg}}</h1>
+    <!-- <a href="{{url}}">Link</a> -->
+    <a :href="url">Link</a>
+    <p>
+        <form>
+            <label for="txtname">Enter Name:</label>
+            <input type="text" v-model="nm" />
+        </form>
+    </p>
+    <p>{{nm}}</p>
+</div>
+
+<script>
+    var vm = new Vue({
+       el: '#app',
+       data: {
+           msg: 'Hello from Vue Training live preview',
+           url: 'http://www.google.com',
+           nm: 'Yes'
+       }
+    });
+</script>
+</body>
+</html>
